@@ -2,16 +2,16 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Code, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
+  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
-  { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -19,31 +19,29 @@ export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/30 backdrop-blur-lg">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Code className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline sm:inline-block">Saptarshi Mukherjee</span>
-          </Link>
-        </div>
-
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+    <header className="sticky top-0 z-50 w-full">
+      <div className="container flex h-24 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="w-4 h-4 bg-white rounded-full" />
+          <span className="sr-only">Saptarshi Mukherjee</span>
+        </Link>
+        
+        <nav className="hidden md:flex items-center space-x-1 p-2 rounded-full glass-card border">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary"
+              className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary rounded-full"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-4 md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon">
                 <Menu />
                 <span className="sr-only">Open Menu</span>
               </Button>
@@ -52,8 +50,8 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between border-b pb-4">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setSheetOpen(false)}>
-                        <Code className="h-6 w-6 text-primary" />
-                        <span className="font-bold">Saptarshi M.</span>
+                        <div className="w-4 h-4 bg-white rounded-full" />
+                        <span className="sr-only">Saptarshi M.</span>
                     </Link>
                     <SheetTrigger asChild>
                         <Button variant="ghost" size="icon">

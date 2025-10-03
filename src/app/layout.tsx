@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -27,10 +27,10 @@ export default function RootLayout({
       <body className={cn('font-body antialiased')}>
         <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-70">
           <iframe
-            src="https://my.spline.design/claritystream-oFw210UEZOeu4KemIqYhKyj4/"
-            frameBorder="0"
-            width="100%"
-            height="100%"
+            src='https://my.spline.design/interactiveliquid-246e7f12f1737d10103b07d61298a287/'
+            frameBorder='0'
+            width='100%'
+            height='100%'
           ></iframe>
         </div>
         {children}
