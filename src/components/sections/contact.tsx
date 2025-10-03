@@ -114,12 +114,12 @@ export function Contact() {
         </Card>
         <div className="mt-8 flex justify-center gap-4">
           <Button variant="outline" size="lg" asChild>
-            <Link href="https://github.com/saptarshi-mukherjee" target="_blank">
+            <Link href="https://github.com/Sappymukherjee214" target="_blank">
               <Github className="mr-2 h-5 w-5" /> GitHub
             </Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <Link href="https://linkedin.com/in/saptarshi-mukherjee" target="_blank">
+            <Link href="https://www.linkedin.com/in/saptarshi-mukherjee-096191263" target="_blank">
               <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
             </Link>
           </Button>

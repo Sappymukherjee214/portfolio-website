@@ -12,12 +12,12 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com/saptarshi-mukherjee" target="_blank" aria-label="GitHub">
+            <Link href="https://github.com/Sappymukherjee214" target="_blank" aria-label="GitHub">
               <Github className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://linkedin.com/in/saptarshi-mukherjee" target="_blank" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/in/saptarshi-mukherjee-096191263" target="_blank" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </Link>
           </Button>
