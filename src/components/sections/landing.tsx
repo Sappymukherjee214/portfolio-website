@@ -42,8 +42,7 @@ export function Landing() {
         </div>
         <div className="relative flex justify-center items-center">
             {profileImage && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={profileImage.imageUrl}
                 alt={profileImage.description}
                 width={400}
