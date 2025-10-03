@@ -16,6 +16,9 @@ const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#toolkit', label: 'Toolkit' },
+  { href: '#frameworks', label: 'Frameworks' },
   { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -56,7 +59,7 @@ export function Header() {
             </div>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-1 p-2 rounded-full glass-card border relative">
+        <nav className="hidden lg:flex items-center space-x-1 p-2 rounded-full glass-card border relative">
           <AnimatePresence>
             {hoveredLink && (
               <motion.div
@@ -83,7 +86,7 @@ export function Header() {
               onMouseLeave={() => setHoveredLink(activeLink)}
               onClick={() => setActiveLink(link.href)}
               className={cn(
-                "px-4 py-2 text-sm font-medium transition-colors rounded-full relative",
+                "px-3 py-1.5 text-sm font-medium transition-colors rounded-full relative",
                 activeLink === link.href ? "text-primary-foreground" : "hover:text-primary"
               )}
             >
@@ -110,7 +113,7 @@ export function Header() {
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">

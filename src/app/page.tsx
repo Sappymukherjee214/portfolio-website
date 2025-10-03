@@ -9,6 +9,9 @@ import { AiResumeBuilder } from '@/components/sections/ai-resume-builder';
 import { Certifications } from '@/components/sections/certifications';
 import { Contact } from '@/components/sections/contact';
 import { Chatbot } from '@/components/chatbot';
+import { Testimonials } from '@/components/sections/testimonials';
+import { SaasToolkit } from '@/components/sections/saas-toolkit';
+import { BehavioralFrameworks } from '@/components/sections/behavioral-frameworks';
 
 export default function Home() {
   return (
@@ -20,6 +23,9 @@ export default function Home() {
         <Skills />
         <Experience />
         <Projects />
+        <Testimonials />
+        <SaasToolkit />
+        <BehavioralFrameworks />
         <AiResumeBuilder />
         <Certifications />
         <Contact />
