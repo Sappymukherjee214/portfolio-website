@@ -46,14 +46,14 @@ export function Chatbot() {
 
   return (
     <>
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-8 left-8 z-50">
         <Button onClick={() => setIsOpen(!isOpen)} size="icon" className="rounded-full h-16 w-16 shadow-lg">
           {isOpen ? <X className="h-8 w-8" /> : <MessageSquare className="h-8 w-8" />}
         </Button>
       </div>
 
       {isOpen && (
-        <div className="fixed bottom-28 right-8 z-50 w-full max-w-sm">
+        <div className="fixed bottom-28 left-8 z-50 w-full max-w-sm">
           <div className="glass-card rounded-lg border shadow-2xl flex flex-col h-[60vh]">
             <div className="flex items-center gap-4 p-4 border-b">
               <Bot className="h-8 w-8 text-primary" />
