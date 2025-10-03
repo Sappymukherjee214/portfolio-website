@@ -7,6 +7,7 @@ import { Projects } from '@/components/sections/projects';
 import { AiResumeBuilder } from '@/components/sections/ai-resume-builder';
 import { Certifications } from '@/components/sections/certifications';
 import { Contact } from '@/components/sections/contact';
+import { Chatbot } from '@/components/chatbot';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
