@@ -22,8 +22,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full">
       <div className="container flex h-24 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="w-4 h-4 bg-white rounded-full" />
-          <span className="sr-only">Saptarshi Mukherjee</span>
+          
+          <span className="font-bold text-lg">Saptarshi Mukherjee</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-1 p-2 rounded-full glass-card border">
@@ -50,8 +50,8 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between border-b pb-4">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setSheetOpen(false)}>
-                        <div className="w-4 h-4 bg-white rounded-full" />
-                        <span className="sr-only">Saptarshi M.</span>
+                        
+                        <span className="font-bold text-lg">Saptarshi M.</span>
                     </Link>
                     <SheetTrigger asChild>
                         <Button variant="ghost" size="icon">
