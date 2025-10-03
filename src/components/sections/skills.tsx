@@ -12,7 +12,8 @@ import {
   SiCss3,
   SiGit,
   SiVercel,
-  SiPython
+  SiPython,
+  SiExpress,
 } from "@icons-pack/react-simple-icons";
 
 const skills = [
@@ -24,6 +25,7 @@ const skills = [
   { name: 'React', icon: <SiReact size={40} /> },
   { name: 'Next.js', icon: <SiNextdotjs size={40} /> },
   { name: 'Node.js', icon: <SiNodedotjs size={40} /> },
+  { name: 'Express', icon: <SiExpress size={40} /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={40} /> },
   { name: 'Vercel', icon: <SiVercel size={40} /> },
   { name: 'Git', icon: <SiGit size={40} /> },
