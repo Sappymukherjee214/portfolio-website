@@ -2,6 +2,7 @@
 import { Section, SectionHeading } from '@/components/ui/section';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Code, FileText, BrainCircuit } from 'lucide-react';
+import { MotionDiv } from '../motion-div';
 
 const experiences = [
   {
@@ -24,20 +25,22 @@ const experiences = [
 export function Experience() {
   return (
     <Section id="experience">
-      <SectionHeading>Experience</SectionHeading>
-      <div className="grid md:grid-cols-3 gap-8">
-        {experiences.map((exp, index) => (
-          <Card key={index} className="flex flex-col text-center items-center p-6 transition-transform transform hover:-translate-y-2">
-            <div className="mb-4">{exp.icon}</div>
-            <CardHeader className="p-0">
-              <CardTitle className="font-headline text-xl">{exp.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="p-0 mt-2">
-              <p className="text-muted-foreground">{exp.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <MotionDiv>
+        <SectionHeading>Experience</SectionHeading>
+        <div className="grid md:grid-cols-3 gap-8">
+            {experiences.map((exp, index) => (
+            <Card key={index} className="flex flex-col text-center items-center p-6 transition-transform transform hover:-translate-y-2 hover:shadow-primary/20">
+                <div className="mb-4">{exp.icon}</div>
+                <CardHeader className="p-0">
+                <CardTitle className="font-headline text-xl">{exp.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 mt-2">
+                <p className="text-muted-foreground">{exp.description}</p>
+                </CardContent>
+            </Card>
+            ))}
+        </div>
+      </MotionDiv>
     </Section>
   );
 }
