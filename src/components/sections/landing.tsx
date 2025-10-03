@@ -22,7 +22,7 @@ export function Landing() {
           </Badge>
 
           <h1 className="font-headline font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight">
-            Hi, I'm Saptarshi Mukherjee, an aspiring <span className="text-primary">Software</span> developer building user-friendly web applications.
+            Hi, I'm Saptarshi Mukherjee, an aspiring <span className="text-green-400">Software</span> developer building user-friendly web applications.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-2xl mx-auto md:mx-0">
             A passionate software developer based in the India, skilled in the MERN stack and other applications like Python, dedicated to writing clean, efficient code while continuously expanding my technical knowledge.
