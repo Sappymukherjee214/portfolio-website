@@ -12,13 +12,13 @@ import {
   SiCss3,
   SiGit,
   SiVercel,
-  SiStyledcomponents
+  SiPython
 } from "@icons-pack/react-simple-icons";
 
 const skills = [
   { name: 'HTML5', icon: <SiHtml5 size={40} /> },
   { name: 'CSS3', icon: <SiCss3 size={40} /> },
-  { name: 'Styled Components', icon: <SiStyledcomponents size={40} /> },
+  { name: 'Python', icon: <SiPython size={40} /> },
   { name: 'JavaScript', icon: <SiJavascript size={40} /> },
   { name: 'TypeScript', icon: <SiTypescript size={40} /> },
   { name: 'React', icon: <SiReact size={40} /> },
