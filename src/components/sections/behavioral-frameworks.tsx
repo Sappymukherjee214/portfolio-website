@@ -27,26 +27,52 @@ const frameworks = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export function BehavioralFrameworks() {
   return (
     <Section id="frameworks">
       <MotionDiv>
         <SectionHeading>Behavioral Frameworks</SectionHeading>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <MotionDiv 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {frameworks.map((framework, index) => (
-            <Card key={index} className="p-6 text-center flex flex-col items-center">
-                <div className="bg-secondary p-3 rounded-lg inline-block mb-4">
-                    {framework.icon}
-                </div>
-                <CardHeader className="p-0">
-                    <CardTitle className="font-headline text-xl mb-2">{framework.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 flex-grow">
-                    <p className="text-muted-foreground">{framework.description}</p>
-                </CardContent>
-            </Card>
+            <MotionDiv variants={itemVariants} key={index}>
+              <Card className="p-6 text-center flex flex-col items-center h-full">
+                  <div className="bg-secondary p-3 rounded-lg inline-block mb-4">
+                      {framework.icon}
+                  </div>
+                  <CardHeader className="p-0">
+                      <CardTitle className="font-headline text-xl mb-2">{framework.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0 flex-grow">
+                      <p className="text-muted-foreground">{framework.description}</p>
+                  </CardContent>
+              </Card>
+            </MotionDiv>
           ))}
-        </div>
+        </MotionDiv>
       </MotionDiv>
     </Section>
   );

@@ -24,22 +24,48 @@ const toolkit = [
   { name: 'SendGrid', icon: <Mail size={32} />, description: 'Email Delivery Service' },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export function SaasToolkit() {
   return (
     <Section id="toolkit">
       <MotionDiv>
         <SectionHeading>SaaS Toolkit</SectionHeading>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <MotionDiv 
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {toolkit.map((tool) => (
-            <Card key={tool.name} className="p-4 transition-transform transform hover:-translate-y-2 hover:shadow-primary/20 flex flex-col items-center text-center">
-              <div className="text-primary mb-3">
-                {tool.icon}
-              </div>
-              <p className="font-semibold text-base mb-1">{tool.name}</p>
-              <p className="text-sm text-muted-foreground">{tool.description}</p>
-            </Card>
+            <MotionDiv variants={itemVariants} key={tool.name}>
+              <Card className="p-4 transition-transform transform hover:-translate-y-2 hover:shadow-primary/20 flex flex-col items-center text-center h-full">
+                <div className="text-primary mb-3">
+                  {tool.icon}
+                </div>
+                <p className="font-semibold text-base mb-1">{tool.name}</p>
+                <p className="text-sm text-muted-foreground flex-grow">{tool.description}</p>
+              </Card>
+            </MotionDiv>
           ))}
-        </div>
+        </MotionDiv>
       </MotionDiv>
     </Section>
   );

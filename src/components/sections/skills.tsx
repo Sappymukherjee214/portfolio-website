@@ -55,19 +55,44 @@ const skills = [
   { name: 'Streamlit', icon: <SiStreamlit size={40} /> },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+
 export function Skills() {
   return (
     <Section id="skills">
       <MotionDiv>
         <SectionHeading>My Skills</SectionHeading>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <MotionDiv
+          className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col items-center gap-2 text-muted-foreground transition-all hover:text-foreground hover:scale-110">
+             <MotionDiv key={skill.name} variants={itemVariants} className="flex flex-col items-center gap-2 text-muted-foreground transition-all hover:text-foreground hover:scale-110">
               {skill.icon}
               <span className="text-sm font-medium">{skill.name}</span>
-            </div>
+            </MotionDiv>
           ))}
-        </div>
+        </MotionDiv>
       </MotionDiv>
     </Section>
   );

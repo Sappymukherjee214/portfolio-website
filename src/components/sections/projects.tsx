@@ -42,54 +42,80 @@ const projects = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export function Projects() {
   return (
     <Section id="projects">
         <MotionDiv>
             <SectionHeading>Projects</SectionHeading>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <MotionDiv 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+            >
                 {projects.map((project, index) => {
                 const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
                 return (
-                    <Card key={project.title} className="overflow-hidden flex flex-col group transition-transform transform hover:-translate-y-2 hover:shadow-primary/20">
-                    {projectImage && (
-                        <div className="overflow-hidden">
-                            <Image
-                            src={projectImage.imageUrl}
-                            alt={projectImage.description}
-                            width={600}
-                            height={400}
-                            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                            data-ai-hint={projectImage.imageHint}
-                            />
-                        </div>
-                    )}
-                    <CardHeader>
-                        <CardTitle className="font-headline">{project.title}</CardTitle>
-                        <CardDescription className="h-12">{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardFooter className="mt-auto flex justify-end gap-2">
-                        {project.githubLink && (
-                        <Button variant="outline" size="sm" asChild>
-                            <Link href={project.githubLink} target="_blank">
-                            <Github />
-                            <span>GitHub</span>
-                            </Link>
-                        </Button>
-                        )}
-                        {project.liveLink && (
-                        <Button variant="default" size="sm" asChild>
-                            <Link href={project.liveLink}>
-                            <ExternalLink />
-                            <span>View</span>
-                            </Link>
-                        </Button>
-                        )}
-                    </CardFooter>
-                    </Card>
+                    <MotionDiv variants={itemVariants} key={project.title}>
+                      <Card className="overflow-hidden flex flex-col h-full group transition-transform transform hover:-translate-y-2 hover:shadow-primary/20">
+                      {projectImage && (
+                          <div className="overflow-hidden">
+                              <Image
+                              src={projectImage.imageUrl}
+                              alt={projectImage.description}
+                              width={600}
+                              height={400}
+                              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                              data-ai-hint={projectImage.imageHint}
+                              />
+                          </div>
+                      )}
+                      <CardHeader>
+                          <CardTitle className="font-headline">{project.title}</CardTitle>
+                          <CardDescription className="h-12">{project.description}</CardDescription>
+                      </CardHeader>
+                      <CardFooter className="mt-auto flex justify-end gap-2">
+                          {project.githubLink && (
+                          <Button variant="outline" size="sm" asChild>
+                              <Link href={project.githubLink} target="_blank">
+                              <Github />
+                              <span>GitHub</span>
+                              </Link>
+                          </Button>
+                          )}
+                          {project.liveLink && (
+                          <Button variant="default" size="sm" asChild>
+                              <Link href={project.liveLink}>
+                              <ExternalLink />
+                              <span>View</span>
+                              </Link>
+                          </Button>
+                          )}
+                      </CardFooter>
+                      </Card>
+                    </MotionDiv>
                 );
                 })}
-            </div>
+            </MotionDiv>
       </MotionDiv>
     </Section>
   );
