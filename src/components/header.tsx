@@ -50,7 +50,7 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-secondary flex items-center justify-center rounded-md">
-                <span className="font-bold text-xl bg-gradient-to-br from-cyan-400 to-green-400 text-transparent bg-clip-text">
+                <span className="font-bold text-xl bg-gradient-to-br from-primary to-primary/60 text-transparent bg-clip-text">
                     SM
                 </span>
             </div>
@@ -123,7 +123,7 @@ export function Header() {
                   <div className="flex items-center justify-between border-b pb-4">
                       <Link href="/" className="flex items-center space-x-2" onClick={() => setSheetOpen(false)}>
                           <div className="w-10 h-10 bg-secondary flex items-center justify-center rounded-md">
-                            <span className="font-bold text-xl bg-gradient-to-br from-cyan-400 to-green-400 text-transparent bg-clip-text">
+                            <span className="font-bold text-xl bg-gradient-to-br from-primary to-primary/60 text-transparent bg-clip-text">
                                 SM
                             </span>
                           </div>
