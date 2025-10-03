@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "saptarshi-profile",
+      "description": "Professional photo of Saptarshi Mukherjee",
+      "imageUrl": "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkzNjcyMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "project-ai-resume-builder",
+      "description": "Screenshot of AI Resume Builder project",
+      "imageUrl": "https://images.unsplash.com/photo-1587116987928-21e47bd76cd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXN1bWUlMjBhcHBsaWNhdGlvbnxlbnwwfHx8fDE3NTkzODIwNTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "resume application"
+    },
+    {
+      "id": "project-virtual-mouse",
+      "description": "Screenshot of Virtual Mouse with Hand Gestures project",
+      "imageUrl": "https://images.unsplash.com/photo-1758577515333-e71b713059f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoYW5kJTIwdHJhY2tpbmd8ZW58MHx8fHwxNzU5NDcyNDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hand tracking"
+    },
+    {
+      "id": "project-photo-caption-generator",
+      "description": "Screenshot of Photo Caption Generator project",
+      "imageUrl": "https://images.unsplash.com/photo-1633218388467-539651dcf81f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbWFnZSUyMHRleHR8ZW58MHx8fHwxNzU5NDcyNDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "image text"
+    },
+    {
+      "id": "project-expense-explanation",
+      "description": "Screenshot of Expense Explanation Generator project",
+      "imageUrl": "https://images.unsplash.com/photo-1744473755637-e09f0c2fab41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNlJTIwY2hhcnR8ZW58MHx8fHwxNzU5Mzg3ODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance chart"
+    },
+    {
+      "id": "project-college-recommendation",
+      "description": "Screenshot of College Recommendation Engine project",
+      "imageUrl": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc1OTM5NjM5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university campus"
+    }
+  ]
 }
