@@ -12,6 +12,7 @@ const certifications = [
   { name: 'Azure Fundamentals', issuer: 'Microsoft', year: '2025', id: 'AZ-900 Certification' },
   { name: 'Java SE Programmer', issuer: 'Oracle', year: '2025', id: '1Z0-819' },
   { name: 'AI Practitioner', issuer: 'AWS', year: '2025', id: 'CLF-C01' },
+  { name: 'Machine Learning', issuer: 'Coursera', year: '2023', id: 'Certificate of Completion' },
 ];
 
 export function Certifications() {
