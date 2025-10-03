@@ -34,7 +34,7 @@ export default function RootLayout({
         >
             <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-70">
             <iframe
-                src='https://my.spline.design/claritystream-d963339474700d1487f5d68b92b95c9a/'
+                src='https://my.spline.design/dunes-9aMOvbUQzHOoWEkvJFhQkq3X/'
                 frameBorder='0'
                 width='100%'
                 height='100%'
