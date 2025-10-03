@@ -14,6 +14,7 @@ import {
   SiVercel,
   SiPython,
   SiExpress,
+  SiGithub,
 } from "@icons-pack/react-simple-icons";
 
 const skills = [
@@ -29,6 +30,7 @@ const skills = [
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={40} /> },
   { name: 'Vercel', icon: <SiVercel size={40} /> },
   { name: 'Git', icon: <SiGit size={40} /> },
+  { name: 'GitHub', icon: <SiGithub size={40} /> },
 ];
 
 export function Skills() {
