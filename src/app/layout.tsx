@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={cn('font-body antialiased')}>
         <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-70">
           <iframe
-            src='https://my.spline.design/interactiveliquid-246e7f12f1737d10103b07d61298a287/'
+            src='https://my.spline.design/claritystream-0Fw210UEZOeu4KemIqYhKyj4/'
             frameBorder='0'
             width='100%'
             height='100%'
