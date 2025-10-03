@@ -2,7 +2,7 @@
 import { Github, Linkedin, Download, Facebook, Instagram, Youtube, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { SiDiscord, SiCredly, SiTelegram } from '@icons-pack/react-simple-icons';
+import { SiDiscord, SiCredly, SiTelegram, SiX } from '@icons-pack/react-simple-icons';
 
 export function Footer() {
   return (
@@ -20,6 +20,11 @@ export function Footer() {
           <Button variant="ghost" size="icon" asChild>
             <Link href="https://www.linkedin.com/in/saptarshi-mukherjee-096191263" target="_blank" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="https://x.com/MukherjeeXii" target="_blank" aria-label="X">
+              <SiX className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
