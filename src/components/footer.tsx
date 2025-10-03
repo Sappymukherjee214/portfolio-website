@@ -23,27 +23,27 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="#" target="_blank" aria-label="Facebook">
+            <Link href="https://www.facebook.com/share/1BJKG9mvac/" target="_blank" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="#" target="_blank" aria-label="Instagram">
+            <Link href="https://www.instagram.com/saptarshi.mukherjee.31392?igsh=a3JjbW5kbGhmdHcw" target="_blank" aria-label="Instagram">
               <Instagram className="h-5 w-5" />
             </Link>
           </Button>
            <Button variant="ghost" size="icon" asChild>
-            <Link href="#" target="_blank" aria-label="Discord">
+            <Link href="https://discord.com/users/1119889309424701480" target="_blank" aria-label="Discord">
               <SiDiscord className="h-5 w-5" />
             </Link>
           </Button>
            <Button variant="ghost" size="icon" asChild>
-            <Link href="#" target="_blank" aria-label="Credly">
+            <Link href="https://www.credly.com/users/saptarshi-mukherjee.62a3f023" target="_blank" aria-label="Credly">
               <SiCredly className="h-5 w-5" />
             </Link>
           </Button>
            <Button variant="ghost" size="icon" asChild>
-            <Link href="#" target="_blank" aria-label="YouTube">
+            <Link href="https://youtube.com/@saptarshimukherjeescience_7351?si=kJjs87t18MgfQ0NI" target="_blank" aria-label="YouTube">
               <Youtube className="h-5 w-5" />
             </Link>
           </Button>

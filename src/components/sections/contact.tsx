@@ -126,27 +126,27 @@ export function Contact() {
             </Link>
           </Button>
            <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+            <Link href="https://www.facebook.com/share/1BJKG9mvac/" target="_blank">
               <Facebook className="mr-2 h-5 w-5" /> Facebook
             </Link>
           </Button>
            <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+            <Link href="https://www.instagram.com/saptarshi.mukherjee.31392?igsh=a3JjbW5kbGhmdHcw" target="_blank">
               <Instagram className="mr-2 h-5 w-5" /> Instagram
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+            <Link href="https://discord.com/users/1119889309424701480" target="_blank">
               <SiDiscord className="mr-2 h-5 w-5" /> Discord
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+            <Link href="https://www.credly.com/users/saptarshi-mukherjee.62a3f023" target="_blank">
               <SiCredly className="mr-2 h-5 w-5" /> Credly
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+            <Link href="https://youtube.com/@saptarshimukherjeescience_7351?si=kJjs87t18MgfQ0NI" target="_blank">
               <Youtube className="mr-2 h-5 w-5" /> YouTube
             </Link>
           </Button>
