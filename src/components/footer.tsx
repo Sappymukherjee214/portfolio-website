@@ -1,8 +1,8 @@
 
-import { Github, Linkedin, Download, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Github, Linkedin, Download, Facebook, Instagram, Youtube, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { SiDiscord, SiCredly } from '@icons-pack/react-simple-icons';
+import { SiDiscord, SiCredly, SiTelegram } from '@icons-pack/react-simple-icons';
 
 export function Footer() {
   return (
@@ -35,6 +35,11 @@ export function Footer() {
            <Button variant="ghost" size="icon" asChild>
             <Link href="https://discord.com/users/1119889309424701480" target="_blank" aria-label="Discord">
               <SiDiscord className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="#" target="_blank" aria-label="Telegram">
+              <SiTelegram className="h-5 w-5" />
             </Link>
           </Button>
            <Button variant="ghost" size="icon" asChild>

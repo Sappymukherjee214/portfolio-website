@@ -15,7 +15,7 @@ import { Github, Linkedin, Download, Send, Loader2, Facebook, Instagram, Youtube
 import Link from 'next/link';
 import { submitContactForm } from '@/app/actions';
 import { useState } from 'react';
-import { SiDiscord, SiCredly } from '@icons-pack/react-simple-icons';
+import { SiDiscord, SiCredly, SiTelegram } from '@icons-pack/react-simple-icons';
 
 
 const formSchema = z.object({
@@ -138,6 +138,11 @@ export function Contact() {
           <Button variant="outline" asChild>
             <Link href="https://discord.com/users/1119889309424701480" target="_blank">
               <SiDiscord className="mr-2 h-5 w-5" /> Discord
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <SiTelegram className="mr-2 h-5 w-5" /> Telegram
             </Link>
           </Button>
           <Button variant="outline" asChild>
