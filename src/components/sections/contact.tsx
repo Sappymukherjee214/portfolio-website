@@ -141,7 +141,7 @@ export function Contact() {
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+            <Link href="https://t.me/sappymukherjee214" target="_blank">
               <SiTelegram className="mr-2 h-5 w-5" /> Telegram
             </Link>
           </Button>

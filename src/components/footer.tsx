@@ -38,7 +38,7 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="#" target="_blank" aria-label="Telegram">
+            <Link href="https://t.me/sappymukherjee214" target="_blank" aria-label="Telegram">
               <SiTelegram className="h-5 w-5" />
             </Link>
           </Button>
