@@ -11,8 +11,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { Github, Linkedin, Download, Send } from 'lucide-react';
+import { Github, Linkedin, Download, Send, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { submitContactForm } from '@/app/actions';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -22,19 +24,30 @@ const formSchema = z.object({
 
 export function Contact() {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: { name: '', email: '', message: '' },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is a dummy submission handler.
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: 'Thanks for reaching out. I will get back to you soon.',
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    const result = await submitContactForm(values);
+    setIsLoading(false);
+
+    if (result.success) {
+      toast({
+        title: 'Message Sent!',
+        description: 'Thanks for reaching out. I will get back to you soon.',
+      });
+      form.reset();
+    } else {
+        toast({
+            variant: 'destructive',
+            title: 'Uh oh! Something went wrong.',
+            description: result.error,
+        });
+    }
   }
 
   return (
@@ -52,7 +65,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} />
+                        <Input placeholder="Your Name" {...field} disabled={isLoading} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -65,7 +78,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
+                        <Input placeholder="your.email@example.com" {...field} disabled={isLoading} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -78,14 +91,22 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Your message..." {...field} />
+                        <Textarea placeholder="Your message..." {...field} disabled={isLoading} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                    {isLoading ? (
+                        <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
+                        </>
+                    ) : (
+                        <>
+                            <Send className="mr-2 h-4 w-4" /> Send Message
+                        </>
+                    )}
                 </Button>
               </form>
             </Form>
@@ -103,7 +124,7 @@ export function Contact() {
             </Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <Link href="/resume.pdf" target="_blank">
+            <Link href="/resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target="_blank">
               <Download className="mr-2 h-5 w-5" /> Resume
             </Link>
           </Button>

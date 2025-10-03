@@ -22,7 +22,7 @@ export function Landing() {
           </Badge>
 
           <h1 className="font-headline font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight">
-            Hi, I&apos;m Saptarshi Mukherjee, an aspiring <span className="text-primary">Software</span> developer building user-friendly web applications.
+            Hi, I'm Saptarshi Mukherjee, an aspiring <span className="text-primary">Software</span> developer building user-friendly web applications.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-2xl mx-auto md:mx-0">
             A passionate software developer based in the India, skilled in the MERN stack and other applications like Python, dedicated to writing clean, efficient code while continuously expanding my technical knowledge.
@@ -34,7 +34,7 @@ export function Landing() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/resume.pdf" target='_blank'>
+              <Link href="/resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target='_blank'>
                 Download Resume <Download className="ml-2 h-4 w-4" />
               </Link>
             </Button>
