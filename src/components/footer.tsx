@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-secondary">
+    <footer>
       <div className="container flex flex-col items-center justify-between gap-4 py-6 md:flex-row">
         <p className="text-sm text-muted-foreground">
           © 2025 Saptarshi Mukherjee. All rights reserved.

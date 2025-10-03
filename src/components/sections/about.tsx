@@ -3,7 +3,7 @@ import { Section, SectionHeading } from '@/components/ui/section';
 
 export function About() {
   return (
-    <Section id="about" className="bg-secondary">
+    <Section id="about">
       <SectionHeading>About Me</SectionHeading>
       <div className="max-w-3xl mx-auto text-center text-lg text-muted-foreground space-y-4">
         <p>

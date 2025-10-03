@@ -13,7 +13,7 @@ const certifications = [
 
 export function Certifications() {
   return (
-    <Section id="certifications" className="bg-secondary">
+    <Section id="certifications">
       <SectionHeading>Certifications</SectionHeading>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
         {certifications.map((cert) => (

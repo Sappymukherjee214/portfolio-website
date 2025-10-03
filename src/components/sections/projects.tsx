@@ -43,7 +43,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <Section id="projects" className="bg-secondary">
+    <Section id="projects">
       <SectionHeading>Projects</SectionHeading>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => {
