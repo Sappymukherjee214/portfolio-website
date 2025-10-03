@@ -8,7 +8,7 @@ const certifications = [
   { name: 'HackerRank CSS', issuer: 'HackerRank', year: '2024', id: 'CSS' },
   { name: 'HackerRank JavaScript', issuer: 'HackerRank', year: '2024', id: 'JavaScript (Intermediate)' },
   { name: 'Python Video Processing', issuer: 'Udemy', year: '2024', id: 'Certificate of Completion' },
-  { name: 'Google Summer of Code', issuer: 'Google', year: '2023', id: 'Contributor' },
+  { name: 'Google Summer of Code', issuer: 'Google', year: '2024', id: 'Contributor' },
   { name: 'Azure Fundamentals', issuer: 'Microsoft', year: '2025', id: 'AZ-900 Certification' },
   { name: 'Java SE Programmer', issuer: 'Oracle', year: '2025', id: '1Z0-819' },
   { name: 'AI Practitioner', issuer: 'AWS', year: '2025', id: 'CLF-C01' },
