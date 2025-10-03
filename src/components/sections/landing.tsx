@@ -28,7 +28,7 @@ export function Landing() {
             A passionate software developer based in the India, skilled in the MERN stack and other applications like Python, dedicated to writing clean, efficient code while continuously expanding my technical knowledge.
           </p>
           <div className="mt-8 flex gap-4 justify-center md:justify-start">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
               <Link href="#contact">
                 Get in touch <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
