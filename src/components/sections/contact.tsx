@@ -11,10 +11,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { Github, Linkedin, Download, Send, Loader2 } from 'lucide-react';
+import { Github, Linkedin, Download, Send, Loader2, Facebook, Instagram, Youtube } from 'lucide-react';
 import Link from 'next/link';
 import { submitContactForm } from '@/app/actions';
 import { useState } from 'react';
+import { SiDiscord, SiCredly } from '@icons-pack/react-simple-icons';
+
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -112,18 +114,43 @@ export function Contact() {
             </Form>
           </CardContent>
         </Card>
-        <div className="mt-8 flex justify-center gap-4">
-          <Button variant="outline" size="lg" asChild>
+        <div className="mt-8 flex justify-center gap-2 flex-wrap">
+          <Button variant="outline" asChild>
             <Link href="https://github.com/Sappymukherjee214" target="_blank">
               <Github className="mr-2 h-5 w-5" /> GitHub
             </Link>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" asChild>
             <Link href="https://www.linkedin.com/in/saptarshi-mukherjee-096191263" target="_blank">
               <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
             </Link>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+           <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <Facebook className="mr-2 h-5 w-5" /> Facebook
+            </Link>
+          </Button>
+           <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <Instagram className="mr-2 h-5 w-5" /> Instagram
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <SiDiscord className="mr-2 h-5 w-5" /> Discord
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <SiCredly className="mr-2 h-5 w-5" /> Credly
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <Youtube className="mr-2 h-5 w-5" /> YouTube
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
             <Link href="/resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target="_blank">
               <Download className="mr-2 h-5 w-5" /> Resume
             </Link>
