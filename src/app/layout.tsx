@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
@@ -26,7 +27,7 @@ export default function RootLayout({
       <body className={cn('font-body antialiased')}>
         <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-70">
           <iframe
-            src="https://my.spline.design/particlesflow-7e8c3c2f741005711e64906f3761743a/"
+            src="https://my.spline.design/particlesflow-yCAhJ7QrAJtwBLDSRsoyy2Ij/"
             frameBorder="0"
             width="100%"
             height="100%"
