@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "saptarshi-profile",
-      "description": "Professional photo of Saptarshi Mukherjee",
-      "imageUrl": "https://storage.googleapis.com/aifirebase/scaffolds/sappymukherjee214_1760222049/saptarshi-profile.jpg",
+      "description": "Professional photo of a man in a suit",
+      "imageUrl": "https://storage.googleapis.com/aifirebase/scaffolds/story-pro/saptarshi-profile-2.jpg",
       "imageHint": "professional portrait"
     },
     {
