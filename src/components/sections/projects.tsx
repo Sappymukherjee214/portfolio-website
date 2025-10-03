@@ -1,44 +1,36 @@
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Section, SectionHeading } from '@/components/ui/section';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Github, ExternalLink } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { ExternalLink, Code } from 'lucide-react';
 import { MotionDiv } from '../motion-div';
 
 const projects = [
   {
-    title: 'AI Resume Builder',
-    description: 'A tool that leverages generative AI to tailor resumes to specific job descriptions, helping users stand out.',
-    imageId: 'project-ai-resume-builder',
-    githubLink: '#',
+    title: 'AI-Powered Resume Builder',
+    description: 'Full-stack application generating ATS-optimized resumes, serving 200+ active users with secure authentication and telemetry tracking.',
+    tags: ['React', 'Node.js', 'AI', 'Tailwind'],
     liveLink: '#ai-resume-builder',
   },
   {
-    title: 'Virtual Mouse with Hand Gestures',
-    description: 'Control your computer\'s mouse using hand gestures, powered by computer vision and OpenCV.',
-    imageId: 'project-virtual-mouse',
-    githubLink: '#',
-  },
-  {
     title: 'Photo Caption Generator',
-    description: 'An AI model that automatically generates descriptive captions for images, using deep learning techniques.',
-    imageId: 'project-photo-caption-generator',
-    githubLink: '#',
+    description: 'AI captioning system using Gemini API, processing 1,000+ images/day with 18% higher accuracy and optimized inference pipelines.',
+    tags: ['Python', 'Gemini API', 'React', 'Streamlit'],
+    liveLink: '#',
   },
   {
-    title: 'Expense Explanation Generator',
-    description: 'Simplify financial reports by automatically generating easy-to-understand explanations for expense data.',
-    imageId: 'project-expense-explanation',
-    githubLink: '#',
+    title: 'Virtual Mouse',
+    description: 'Computer vision application enabling hands-free mouse control using gesture recognition and real-time tracking algorithms.',
+    tags: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
+    liveLink: '#',
   },
   {
-    title: 'College Recommendation Engine',
-    description: 'A recommendation system that suggests suitable colleges to students based on their academic profiles and preferences.',
-    imageId: 'project-college-recommendation',
-    githubLink: '#',
+    title: 'GenAI Applications',
+    description: 'Suite of AI-powered tools leveraging modern LLMs for content generation, data analysis, and intelligent automation.',
+    tags: ['Python', 'LLMs', 'Azure', 'APIs'],
+    liveLink: '#',
   },
 ];
 
@@ -66,55 +58,37 @@ export function Projects() {
         <MotionDiv>
             <SectionHeading>Projects</SectionHeading>
             <MotionDiv 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid md:grid-cols-2 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
             >
-                {projects.map((project, index) => {
-                const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
-                return (
+                {projects.map((project) => (
                     <MotionDiv variants={itemVariants} key={project.title}>
-                      <Card className="overflow-hidden flex flex-col h-full group transition-transform transform hover:-translate-y-2 hover:shadow-primary/20">
-                      {projectImage && (
-                          <div className="overflow-hidden">
-                              <Image
-                              src={projectImage.imageUrl}
-                              alt={projectImage.description}
-                              width={600}
-                              height={400}
-                              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                              data-ai-hint={projectImage.imageHint}
-                              />
-                          </div>
-                      )}
-                      <CardHeader>
-                          <CardTitle className="font-headline">{project.title}</CardTitle>
-                          <CardDescription className="h-12">{project.description}</CardDescription>
-                      </CardHeader>
-                      <CardFooter className="mt-auto flex justify-end gap-2">
-                          {project.githubLink && (
-                          <Button variant="outline" size="sm" asChild>
-                              <Link href={project.githubLink} target="_blank">
-                              <Github />
-                              <span>GitHub</span>
-                              </Link>
-                          </Button>
-                          )}
-                          {project.liveLink && (
-                          <Button variant="default" size="sm" asChild>
-                              <Link href={project.liveLink}>
-                              <ExternalLink />
-                              <span>View</span>
-                              </Link>
-                          </Button>
-                          )}
-                      </CardFooter>
+                      <Card className="flex flex-col h-full group relative transition-all duration-300 hover:border-primary/40">
+                        <CardHeader className="flex flex-row items-center justify-between">
+                            <div className="bg-primary/10 border border-primary/30 p-2 rounded-md">
+                                <Code className="h-6 w-6 text-primary" />
+                            </div>
+                            {project.liveLink && (
+                                <Link href={project.liveLink} target="_blank">
+                                    <ExternalLink className="h-5 w-5 text-muted-foreground transition-colors hover:text-primary" />
+                                </Link>
+                            )}
+                        </CardHeader>
+                        <CardContent className="flex-grow space-y-4">
+                            <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
+                            <CardDescription>{project.description}</CardDescription>
+                            <div className="flex flex-wrap gap-2">
+                                {project.tags.map(tag => (
+                                    <Badge key={tag} variant="secondary" className="font-normal">{tag}</Badge>
+                                ))}
+                            </div>
+                        </CardContent>
                       </Card>
                     </MotionDiv>
-                );
-                })}
+                ))}
             </MotionDiv>
       </MotionDiv>
     </Section>
