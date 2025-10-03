@@ -24,6 +24,8 @@ import {
   SiTensorflow,
   SiFigma,
   SiPostman,
+  SiGooglegemini,
+  SiStreamlit,
 } from "@icons-pack/react-simple-icons";
 
 const skills = [
@@ -49,6 +51,8 @@ const skills = [
   { name: 'Vercel', icon: <SiVercel size={40} /> },
   { name: 'Git', icon: <SiGit size={40} /> },
   { name: 'GitHub', icon: <SiGithub size={40} /> },
+  { name: 'Gemini', icon: <SiGooglegemini size={40} /> },
+  { name: 'Streamlit', icon: <SiStreamlit size={40} /> },
 ];
 
 export function Skills() {
