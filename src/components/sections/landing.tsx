@@ -42,14 +42,14 @@ export function Landing() {
         </div>
         <div className="relative flex justify-center items-center">
             {profileImage && (
-              <Image
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
                 src={profileImage.imageUrl}
                 alt={profileImage.description}
                 width={400}
                 height={400}
                 className="rounded-full object-cover border-4 border-card shadow-2xl aspect-square"
                 data-ai-hint={profileImage.imageHint}
-                priority
               />
             )}
         </div>
