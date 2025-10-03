@@ -9,13 +9,16 @@ const certifications = [
   { name: 'HackerRank JavaScript' },
   { name: 'Udemy Python Video Processing' },
   { name: 'Google Summer of Code' },
+  { name: 'Microsoft Azure Fundamentals' },
+  { name: 'Oracle Java SE Programmer' },
+  { name: 'AWS AI Practitioner' },
 ];
 
 export function Certifications() {
   return (
     <Section id="certifications">
       <SectionHeading>Certifications</SectionHeading>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
         {certifications.map((cert) => (
           <Card key={cert.name} className="p-4 transition-transform transform hover:-translate-y-2 hover:shadow-primary/20">
             <CardContent className="flex flex-col items-center justify-center text-center gap-3 p-0">
