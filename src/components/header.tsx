@@ -54,7 +54,6 @@ export function Header() {
                     SM
                 </span>
             </div>
-            <span className="font-bold text-lg hidden sm:block">Saptarshi Mukherjee</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-1 p-2 rounded-full glass-card border relative">
