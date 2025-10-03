@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -47,8 +48,13 @@ export function Header() {
   return (
     <header className="sticky top-4 z-50 w-full">
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-bold text-lg">Saptarshi Mukherjee</span>
+        <Link href="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-secondary flex items-center justify-center rounded-md">
+                <span className="font-bold text-xl bg-gradient-to-br from-cyan-400 to-green-400 text-transparent bg-clip-text">
+                    SM
+                </span>
+            </div>
+            <span className="font-bold text-lg hidden sm:block">Saptarshi Mukherjee</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-1 p-2 rounded-full glass-card border relative">
@@ -117,6 +123,11 @@ export function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between border-b pb-4">
                       <Link href="/" className="flex items-center space-x-2" onClick={() => setSheetOpen(false)}>
+                          <div className="w-10 h-10 bg-secondary flex items-center justify-center rounded-md">
+                            <span className="font-bold text-xl bg-gradient-to-br from-cyan-400 to-green-400 text-transparent bg-clip-text">
+                                SM
+                            </span>
+                          </div>
                           <span className="font-bold text-lg">Saptarshi M.</span>
                       </Link>
                       <SheetTrigger asChild>
