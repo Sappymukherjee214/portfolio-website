@@ -16,9 +16,12 @@ export async function generateTailoredResume(input: TailorResumeToJobDescription
 
 export async function askChatbot(input: AskSaptarshiInput) {
     try {
+        // Adding a small delay to make the "typing" indicator visible
+        await new Promise(resolve => setTimeout(resolve, 500));
         const result = await askSaptarshi(input);
         return { success: true, data: result };
-    } catch (error) {
+    } catch (error)
+ {
         console.error('Error with chatbot:', error);
         return { success: false, error: 'The chatbot is currently unavailable. Please try again later.' };
     }
