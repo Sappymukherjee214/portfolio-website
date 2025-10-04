@@ -25,7 +25,7 @@ const education = [
     date: '2021 - 2023',
     details: [
         'Stream: Science',
-        'Board: Your Board (e.g., CBSE, ISC)',
+        'Board: Central Board of Secondary Education (CBSE)',
         'Percentage: 90% (or your score)',
     ],
   },
