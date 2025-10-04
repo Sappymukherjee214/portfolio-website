@@ -36,7 +36,7 @@ const education = [
     location: 'City, Country',
     date: '2020 - 2021',
     details: [
-        'Board: Your Board (e.g., CBSE, ICSE)',
+        'Board: Indian Certificate of Secondary Examination (ICSE))',
         'Percentage: 83%',
     ],
   },
