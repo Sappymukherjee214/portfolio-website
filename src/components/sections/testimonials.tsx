@@ -37,7 +37,7 @@ const testimonials = [
     company: 'Innovate Hub',
     quote: "Saptarshi has a great eye for detail and a deep understanding of user-centric design. He consistently delivers high-quality work and is a great collaborator. I'm always impressed with his dedication to creating intuitive and engaging user experiences.",
     imageId: 'testimonial-priya',
-    rating: 4.5,
+    rating: 5,
   },
 ];
 
@@ -72,7 +72,7 @@ const renderStars = (rating: number) => {
         stars.push(<StarHalf key="half" className="w-5 h-5 fill-current" />);
     }
 
-    const emptyStars = 5 - stars.length;
+    const emptyStars = 5 - Math.ceil(rating);
     for (let i = 0; i < emptyStars; i++) {
         stars.push(<Star key={`empty-${i}`} className="w-5 h-5" />);
     }
