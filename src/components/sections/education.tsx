@@ -1,20 +1,43 @@
 
 import { Section, SectionHeading } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, School } from 'lucide-react';
 import { MotionDiv } from '../motion-div';
 
 const education = [
   {
     icon: <GraduationCap className="h-8 w-8 text-primary" />,
     degree: 'Bachelor of Technology in Computer Science and Engineering',
-    university: 'Swami Vivekananda Institute of Science and Technology (SVIST)', // Replace with actual university
-    location: 'Kolkata, West bengal, India', // Replace with actual location
+    university: 'Swami Vivekananda Institute of Science and Technology (SVIST)',
+    location: 'Kolkata, West bengal, India',
     date: '2023-2027',
     details: [
       'Currently a third-year undergraduate student.',
       'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management Systems, Artificial Intelligence.',
       'CGPA: 7.89/10.0 (or as applicable)',
+    ],
+  },
+  {
+    icon: <School className="h-8 w-8 text-primary" />,
+    degree: 'XII (Senior Secondary)',
+    university: 'Your Senior Secondary School',
+    location: 'City, Country',
+    date: '2021 - 2023',
+    details: [
+        'Stream: Science',
+        'Board: Your Board (e.g., CBSE, ISC)',
+        'Percentage: 90% (or your score)',
+    ],
+  },
+  {
+    icon: <School className="h-8 w-8 text-primary" />,
+    degree: 'X (Secondary)',
+    university: 'Your Secondary School',
+    location: 'City, Country',
+    date: '2020 - 2021',
+    details: [
+        'Board: Your Board (e.g., CBSE, ICSE)',
+        'Percentage: 95% (or your score)',
     ],
   },
 ];
