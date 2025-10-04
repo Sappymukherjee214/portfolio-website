@@ -26,7 +26,7 @@ const education = [
     details: [
         'Stream: Science',
         'Board: Central Board of Secondary Education (CBSE)',
-        'Percentage: 90% (or your score)',
+        'Percentage: 83.4%',
     ],
   },
   {
