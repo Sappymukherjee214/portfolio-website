@@ -14,7 +14,7 @@ const education = [
     details: [
       'Currently a third-year undergraduate student.',
       'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management Systems, Artificial Intelligence.',
-      'CGPA: 7.89/10.0 (or as applicable)',
+      'CGPA: 7.89/10.0',
     ],
   },
   {
