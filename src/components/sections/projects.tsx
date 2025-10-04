@@ -20,7 +20,7 @@ const projects = [
     title: 'Photo Caption Generator',
     description: 'AI captioning system using Gemini API, processing 1,000+ images/day with 18% higher accuracy and optimized inference pipelines.',
     tags: ['Python', 'Gemini API', 'React', 'Streamlit'],
-    liveLink: '#',
+    liveLink: 'https://photo-caption-generator-ufrt2zmmfcalamdgavjuik.streamlit.app/',
     imageId: 'project-photo-caption-generator'
   },
   {
