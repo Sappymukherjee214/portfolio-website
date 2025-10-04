@@ -10,7 +10,7 @@ const education = [
     degree: 'Bachelor of Technology in Computer Science',
     university: 'Swami Vivekananda Institute of Science and Technology (SVIST)', // Replace with actual university
     location: 'Kolkata, West bengal, India', // Replace with actual location
-    date: '2022 - 2026',
+    date: '2023-2027',
     details: [
       'Currently a third-year undergraduate student.',
       'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management Systems, Artificial Intelligence.',
