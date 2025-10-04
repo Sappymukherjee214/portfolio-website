@@ -37,7 +37,7 @@ const education = [
     date: '2020 - 2021',
     details: [
         'Board: Your Board (e.g., CBSE, ICSE)',
-        'Percentage: 95% (or your score)',
+        'Percentage: 83%',
     ],
   },
 ];
