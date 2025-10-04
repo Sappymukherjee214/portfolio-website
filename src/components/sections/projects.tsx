@@ -89,9 +89,9 @@ export function Projects() {
                                 )}
                             </CardHeader>
                             <CardContent className="flex-grow space-y-4 p-6 bg-card/80 backdrop-blur-sm">
-                                <div className='flex justify-between items-center'>
+                                <div className='flex justify-between items-start'>
                                     <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
-                                    {project.liveLink && (
+                                    {project.liveLink && project.liveLink !== '#' && (
                                         <Link href={project.liveLink} target={project.liveLink.startsWith('#') ? '' : '_blank'}>
                                             <ExternalLink className="h-5 w-5 text-muted-foreground transition-colors hover:text-primary" />
                                         </Link>
