@@ -27,7 +27,7 @@ const projects = [
     title: 'Virtual Mouse',
     description: 'Computer vision application enabling hands-free mouse control using gesture recognition and real-time tracking algorithms.',
     tags: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
-    liveLink: '#',
+    liveLink: 'https://github.com/Sappymukherjee214/virtual-mouse-keyboard.git',
     imageId: 'project-virtual-mouse'
   },
   {
