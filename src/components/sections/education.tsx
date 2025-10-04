@@ -34,7 +34,7 @@ const education = [
     degree: 'X (Secondary)',
     university: 'Your Secondary School',
     location: 'City, Country',
-    date: '2020 - 2021',
+    date: '2020',
     details: [
         'Board: Indian Certificate of Secondary Education (ICSE)',
         'Percentage: 83%',
