@@ -32,8 +32,8 @@ const education = [
   {
     icon: <School className="h-8 w-8 text-primary" />,
     degree: 'X (Secondary)',
-    university: 'Your Secondary School',
-    location: 'City, Country',
+    university: 'Meghmala Roy Education Centre',
+    location: 'Kolkata, West bengal, India',
     date: '2020',
     details: [
         'Board: Indian Certificate of Secondary Education (ICSE)',
