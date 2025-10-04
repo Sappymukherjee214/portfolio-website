@@ -8,8 +8,8 @@ const education = [
   {
     icon: <GraduationCap className="h-8 w-8 text-primary" />,
     degree: 'Bachelor of Technology in Computer Science',
-    university: 'University Name', // Replace with actual university
-    location: 'City, Country', // Replace with actual location
+    university: 'Swami Vivekananda Institute of Science and Technology (SVIST)', // Replace with actual university
+    location: 'Kolkata, West bengal, India', // Replace with actual location
     date: '2022 - 2026',
     details: [
       'Currently a third-year undergraduate student.',
