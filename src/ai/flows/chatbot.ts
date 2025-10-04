@@ -18,7 +18,7 @@ export type AskSaptarshiInput = z.infer<typeof AskSaptarshiInputSchema>;
 const AskSaptarshiOutputSchema = z.object({
   answer: z.string().describe('The answer to the user\'s question.'),
 });
-export type AskSaptarshiOutput = z.infer<typeof AskSaptarshiOutputSchema>;
+export type AskSaptarshiOutput = z_infer<typeof AskSaptarshiOutputSchema>;
 
 export async function askSaptarshi(
   input: AskSaptarshiInput
@@ -35,31 +35,60 @@ const prompt = ai.definePrompt({
 Here is the information about Saptarshi Mukherjee:
 
 - **Name:** Saptarshi Mukherjee
+- **Tagline:** An aspiring Software developer building user-friendly web applications.
 - **Current Role:** Third-year engineering undergraduate.
 - **Location:** Based in India.
+- **Availability:** Available for work.
+- **About:** A passionate software developer skilled in the MERN stack and Python, dedicated to writing clean, efficient code while continuously expanding his technical knowledge. His journey in technology is driven by a desire to build impactful, real-world projects that solve complex problems.
 - **Passions:** Full-stack development and Artificial Intelligence.
-- **Interests:** Web development, creating robust APIs, Generative AI, and computer vision. He is driven by a desire to build impactful, real-world projects that solve complex problems.
-- **Skills:** MERN stack, Python.
+- **Interests:** Web development, creating robust APIs, Generative AI, and computer vision.
+
+- **Skills:**
+  - **Programming & Web:** HTML5, CSS3, Python, JavaScript, TypeScript, React, Next.js, Node.js, Express, Tailwind CSS, Material UI, Framer Motion.
+  - **Databases:** MongoDB, MySQL.
+  - **AI/ML:** AWS, OpenAI, TensorFlow, Google Gemini, Streamlit.
+  - **Tools & Platforms:** Git, GitHub, Vercel, Figma, Postman.
+
 - **Experience:**
-  - Google Summer of Code Contributor: Contributed to an open-source organization, developing new features and improving the existing codebase.
-  - Technical Paper Presenter: Presented a paper on a noise-resilient object recognition model.
-  - AI/ML Project Development: Worked on various projects involving computer vision and natural language processing.
+  - **Software Developer Intern at Zidio Development (June 2025 - August 2025):** Developed 15+ RESTful APIs and SDKs handling 50K+ requests/day, built end-to-end telemetry pipelines with Azure, automated CI/CD with GitHub Actions (cutting deployment time by 60%), and containerized microservices with Docker.
+  - **Open-Source Contributor at Google Summer of Code (July 2025):** Built 5 telemetry dashboards in Power BI & Synapse for real-time analytics, implemented Kafka pipelines processing 1M+ events/hour (reducing latency by 25%), and addressed 30+ bugs, reducing technical debt by 20%.
+
 - **Projects:**
-  - AI Resume Builder
-  - Virtual Mouse with Hand Gestures
-  - Photo Caption Generator
-  - Expense Explanation Generator
-  - College Recommendation Engine
+  - **AI-Powered Resume Builder:** Full-stack application generating ATS-optimized resumes, serving 200+ active users. (Tags: React, Node.js, AI, Tailwind)
+  - **Photo Caption Generator:** AI system using Gemini API, processing 1,000+ images/day with 18% higher accuracy. (Tags: Python, Gemini API, React, Streamlit)
+  - **Virtual Mouse:** Computer vision app for hands-free mouse control using gesture recognition. (Tags: Python, OpenCV, MediaPipe)
+  - **GenAI Applications:** A suite of AI tools for content generation and data analysis. (Tags: Python, LLMs, Azure, APIs)
+
+- **Behavioral Frameworks (How he approaches work):**
+  - **Agile Methodologies:** Emphasizes iterative development and collaboration.
+  - **First Principles Thinking:** Breaks down complex problems to innovate from the ground up.
+  - **User-Centric Design:** Prioritizes user needs and experience.
+  - **Scalable Architecture:** Designs systems with future growth and reliability in mind.
+
+- **SaaS Toolkit (Tools he uses):**
+  - **Storage:** Amazon S3
+  - **Payments:** Stripe
+  - **Authentication:** Auth0
+  - **Deployment:** Docker, Kubernetes, Jenkins
+  - **Analytics:** Google Analytics
+  - **Email:** SendGrid
+
 - **Testimonials (what others are saying about him):**
   - Sarah Johnson (Senior Software Engineer, Tech Innovators): "Saptarshi is a highly motivated and talented developer. His contributions to our project were invaluable, and he consistently delivered high-quality code. His passion for AI and full-stack development is truly inspiring."
   - Michael Chen (Project Manager, CodeCrafters): "Working with Saptarshi was a pleasure. He is a great communicator and a proactive team player. He's not afraid to take on challenging tasks and always finds creative solutions to complex problems."
   - Emily Rodriguez (GSoC Mentor, Open Source Community): "As a GSoC contributor, Saptarshi demonstrated exceptional technical skills and a strong commitment to the project. He quickly became a valuable member of our community, and I have no doubt he has a bright future ahead."
+
 - **Certifications:**
-  - HackerRank Python
-  - HackerRank CSS
-  - HackerRank JavaScript
-  - Udemy Python Video Processing
-  - Google Summer of Code
+  - HackerRank Python (2024)
+  - HackerRank CSS (2024)
+  - HackerRank JavaScript (2024)
+  - Python Video Processing by Udemy (2024)
+  - Google Summer of Code Contributor (2024)
+  - Azure Fundamentals (2025)
+  - Java SE Programmer (2025)
+  - AWS AI Practitioner (2025)
+  - Machine Learning by Coursera (2023)
+
 - **Contact:** Users can get in touch with him through the contact form on the website.
 
 User's question: {{{question}}}
