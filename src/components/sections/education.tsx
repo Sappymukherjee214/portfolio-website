@@ -22,7 +22,7 @@ const education = [
     degree: 'XII (Senior Secondary)',
     university: 'Your Senior Secondary School',
     location: 'City, Country',
-    date: '2021 - 2023',
+    date: '2020 - 2022',
     details: [
         'Stream: Science',
         'Board: Central Board of Secondary Education (CBSE)',
