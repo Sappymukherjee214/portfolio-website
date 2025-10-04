@@ -1,12 +1,19 @@
 
 'use server';
-import { tailorResumeToJobDescription, TailorResumeToJobDescriptionInput } from '@/ai/flows/ai-resume-builder-tailor-to-job-description';
+import { tailorResumeToJobDescription as enhanceResume } from '@/ai/flows/ai-resume-enhancer';
 import { askSaptarshi, AskSaptarshiInput } from '@/ai/flows/chatbot';
 import { z } from 'zod';
 
-export async function generateTailoredResume(input: TailorResumeToJobDescriptionInput) {
+const EnhanceResumeInputSchema = z.object({
+  resume: z.string().min(50, { message: "Please enter your current resume content (min. 50 characters)." }),
+  jobDescription: z.string().min(50, { message: "Please enter the job description (min. 50 characters)." }),
+});
+
+export type EnhanceResumeInput = z.infer<typeof EnhanceResumeInputSchema>;
+
+export async function generateTailoredResume(input: EnhanceResumeInput) {
     try {
-        const result = await tailorResumeToJobDescription(input);
+        const result = await enhanceResume(input);
         return { success: true, data: result };
     } catch (error) {
         console.error('Error tailoring resume:', error);
