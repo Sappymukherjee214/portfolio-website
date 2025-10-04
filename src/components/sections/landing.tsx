@@ -32,7 +32,7 @@ export function Landing() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target='_blank'>
+              <Link href="https://example.com/your-resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target='_blank'>
                 Download Resume <Download className="ml-2 h-4 w-4" />
               </Link>
             </Button>

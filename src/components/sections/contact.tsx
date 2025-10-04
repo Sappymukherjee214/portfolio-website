@@ -166,7 +166,7 @@ export function Contact() {
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target="_blank">
+            <Link href="https://example.com/your-resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target="_blank">
               <Download className="mr-2 h-5 w-5" /> Resume
             </Link>
           </Button>

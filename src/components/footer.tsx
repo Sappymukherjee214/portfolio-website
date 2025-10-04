@@ -63,7 +63,7 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="/resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target="_blank" aria-label="Download Resume">
+            <Link href="https://example.com/your-resume.pdf" download="Saptarshi-Mukherjee-Resume.pdf" target="_blank" aria-label="Download Resume">
               <Download className="h-5 w-5" />
             </Link>
           </Button>
