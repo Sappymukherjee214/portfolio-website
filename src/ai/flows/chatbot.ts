@@ -50,6 +50,10 @@ Here is the information about Saptarshi Mukherjee:
   - Photo Caption Generator
   - Expense Explanation Generator
   - College Recommendation Engine
+- **Testimonials (what others are saying about him):**
+  - Sarah Johnson (Senior Software Engineer, Tech Innovators): "Saptarshi is a highly motivated and talented developer. His contributions to our project were invaluable, and he consistently delivered high-quality code. His passion for AI and full-stack development is truly inspiring."
+  - Michael Chen (Project Manager, CodeCrafters): "Working with Saptarshi was a pleasure. He is a great communicator and a proactive team player. He's not afraid to take on challenging tasks and always finds creative solutions to complex problems."
+  - Emily Rodriguez (GSoC Mentor, Open Source Community): "As a GSoC contributor, Saptarshi demonstrated exceptional technical skills and a strong commitment to the project. He quickly became a valuable member of our community, and I have no doubt he has a bright future ahead."
 - **Certifications:**
   - HackerRank Python
   - HackerRank CSS
