@@ -20,8 +20,8 @@ const education = [
   {
     icon: <School className="h-8 w-8 text-primary" />,
     degree: 'XII (Senior Secondary)',
-    university: 'Your Senior Secondary School',
-    location: 'City, Country',
+    university: 'BBIT Public School',
+    location: 'Kolkata, West bengal, India',
     date: '2020 - 2022',
     details: [
         'Stream: Science',
