@@ -53,6 +53,12 @@
       "description": "Headshot of Emily Rodriguez",
       "imageUrl": "https://images.unsplash.com/photo-1589729132389-8f0e0b55b91e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGhlYWRzaG90fGVufDB8fHx8MTc1OTQwODI3MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman headshot"
+    },
+    {
+      "id": "testimonial-priya",
+      "description": "Headshot of Priya Sharma",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTM5NjU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
     }
   ]
 }

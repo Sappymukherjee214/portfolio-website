@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { MotionDiv } from '../motion-div';
-import { Star } from 'lucide-react';
+import { Star, StarHalf } from 'lucide-react';
 
 const testimonials = [
   {
@@ -12,21 +12,32 @@ const testimonials = [
     title: 'Senior Software Engineer',
     company: 'Tech Innovators',
     quote: "Saptarshi is a highly motivated and talented developer. His contributions to our project were invaluable, and he consistently delivered high-quality code. His passion for AI and full-stack development is truly inspiring.",
-    imageId: 'testimonial-sarah'
+    imageId: 'testimonial-sarah',
+    rating: 5,
   },
   {
     name: 'Michael Chen',
     title: 'Project Manager',
     company: 'CodeCrafters',
     quote: "Working with Saptarshi was a pleasure. He is a great communicator and a proactive team player. He's not afraid to take on challenging tasks and always finds creative solutions to complex problems.",
-    imageId: 'testimonial-michael'
+    imageId: 'testimonial-michael',
+    rating: 5,
   },
   {
     name: 'Emily Rodriguez',
     title: 'GSoC Mentor',
     company: 'Open Source Community',
     quote: "As a GSoC contributor, Saptarshi demonstrated exceptional technical skills and a strong commitment to the project. He quickly became a valuable member of our community, and I have no doubt he has a bright future ahead.",
-    imageId: 'testimonial-emily'
+    imageId: 'testimonial-emily',
+    rating: 5,
+  },
+   {
+    name: 'Priya Sharma',
+    title: 'Lead UX Designer',
+    company: 'Innovate Hub',
+    quote: "Saptarshi has a great eye for detail and a deep understanding of user-centric design. He consistently delivers high-quality work and is a great collaborator. I'm always impressed with his dedication to creating intuitive and engaging user experiences.",
+    imageId: 'testimonial-priya',
+    rating: 4.5,
   },
 ];
 
@@ -48,6 +59,27 @@ const itemVariants = {
   },
 };
 
+const renderStars = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    for (let i = 0; i < fullStars; i++) {
+        stars.push(<Star key={`full-${i}`} className="w-5 h-5 fill-current" />);
+    }
+
+    if (hasHalfStar) {
+        stars.push(<StarHalf key="half" className="w-5 h-5 fill-current" />);
+    }
+
+    const emptyStars = 5 - stars.length;
+    for (let i = 0; i < emptyStars; i++) {
+        stars.push(<Star key={`empty-${i}`} className="w-5 h-5" />);
+    }
+
+    return stars;
+};
+
 
 export function Testimonials() {
   return (
@@ -55,7 +87,7 @@ export function Testimonials() {
       <MotionDiv>
         <SectionHeading>Testimonials</SectionHeading>
         <MotionDiv 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -68,7 +100,7 @@ export function Testimonials() {
                 <Card className="p-6 flex flex-col h-full">
                   <CardContent className="p-0 flex-grow">
                     <div className="flex text-yellow-400 gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
+                      {renderStars(testimonial.rating)}
                     </div>
                     <p className="text-muted-foreground italic">&quot;{testimonial.quote}&quot;</p>
                   </CardContent>
